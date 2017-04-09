@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47D23878-E04E-4746-9BD8-8C7ECB6C9249}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KosanCrisTrips.Web</RootNamespace>
+    <AssemblyName>KosanCrisTrips.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="dotless.Core, Version=1.5.2.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotless.1.5.2\lib\dotless.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\adminlte\img\avatar.png" />
+    <Content Include="Content\adminlte\img\avatar04.png" />
+    <Content Include="Content\adminlte\img\avatar2.png" />
+    <Content Include="Content\adminlte\img\avatar3.png" />
+    <Content Include="Content\adminlte\img\avatar5.png" />
+    <Content Include="Content\adminlte\img\boxed-bg.jpg" />
+    <Content Include="Content\adminlte\img\boxed-bg.png" />
+    <Content Include="Content\adminlte\img\credit\american-express.png" />
+    <Content Include="Content\adminlte\img\credit\cirrus.png" />
+    <Content Include="Content\adminlte\img\credit\mastercard.png" />
+    <Content Include="Content\adminlte\img\credit\mestro.png" />
+    <Content Include="Content\adminlte\img\credit\paypal.png" />
+    <Content Include="Content\adminlte\img\credit\paypal2.png" />
+    <Content Include="Content\adminlte\img\credit\visa.png" />
+    <Content Include="Content\adminlte\img\default-50x50.gif" />
+    <Content Include="Content\adminlte\img\icons.png" />
+    <Content Include="Content\adminlte\img\photo1.jpg" />
+    <Content Include="Content\adminlte\img\photo2.jpg" />
+    <Content Include="Content\aristo\aristo.css" />
+    <Content Include="Content\aristo\images\icon_sprite.png" />
+    <Content Include="Content\aristo\images\progress_bar.gif" />
+    <Content Include="Content\aristo\images\slider_handles.png" />
+    <Content Include="Content\aristo\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\aristo\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\colorbox\images\border.png" />
+    <Content Include="Content\colorbox\images\controls.png" />
+    <Content Include="Content\colorbox\images\loading.gif" />
+    <Content Include="Content\colorbox\images\loading_background.png" />
+    <Content Include="Content\colorbox\jquery.colorbox.css" />
+    <Content Include="Content\css\select2-spinner.gif" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.png" />
+    <Content Include="Content\css\select2x2.png" />
+    <Content Include="Content\custom themes\jquery.gritter.css" />
+    <Content Include="Content\custom themes\matrix-media.css" />
+    <Content Include="Content\custom themes\matrix-style.css" />
+    <Content Include="Content\Custom\custom-styles.css" />
+    <Content Include="Content\Custom\switch-style.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\font-open-sans.css" />
+    <Content Include="Content\glyphicons.css" />
+    <Content Include="Content\iCheck\all.css" />
+    <Content Include="Content\iCheck\flat\aero%402x.png" />
+    <Content Include="Content\iCheck\flat\aero.css" />
+    <Content Include="Content\iCheck\flat\aero.png" />
+    <Content Include="Content\iCheck\flat\blue%402x.png" />
+    <Content Include="Content\iCheck\flat\blue.css" />
+    <Content Include="Content\iCheck\flat\blue.png" />
+    <Content Include="Content\iCheck\flat\flat%402x.png" />
+    <Content Include="Content\iCheck\flat\flat.css" />
+    <Content Include="Content\iCheck\flat\flat.png" />
+    <Content Include="Content\iCheck\flat\green%402x.png" />
+    <Content Include="Content\iCheck\flat\green.css" />
+    <Content Include="Content\iCheck\flat\green.png" />
+    <Content Include="Content\iCheck\flat\grey%402x.png" />
+    <Content Include="Content\iCheck\flat\grey.css" />
+    <Content Include="Content\iCheck\flat\grey.png" />
+    <Content Include="Content\iCheck\flat\orange%402x.png" />
+    <Content Include="Content\iCheck\flat\orange.css" />
+    <Content Include="Content\iCheck\flat\orange.png" />
+    <Content Include="Content\iCheck\flat\pink%402x.png" />
+    <Content Include="Content\iCheck\flat\pink.css" />
+    <Content Include="Content\iCheck\flat\pink.png" />
+    <Content Include="Content\iCheck\flat\purple%402x.png" />
+    <Content Include="Content\iCheck\flat\purple.css" />
+    <Content Include="Content\iCheck\flat\purple.png" />
+    <Content Include="Content\iCheck\flat\red%402x.png" />
+    <Content Include="Content\iCheck\flat\red.css" />
+    <Content Include="Content\iCheck\flat\red.png" />
+    <Content Include="Content\iCheck\flat\yellow%402x.png" />
+    <Content Include="Content\iCheck\flat\yellow.css" />
+    <Content Include="Content\iCheck\flat\yellow.png" />
+    <Content Include="Content\iCheck\flat\_all.css" />
+    <Content Include="Content\iCheck\futurico\futurico%402x.png" />
+    <Content Include="Content\iCheck\futurico\futurico.css" />
+    <Content Include="Content\iCheck\futurico\futurico.png" />
+    <Content Include="Content\iCheck\line\aero.css" />
+    <Content Include="Content\iCheck\line\blue.css" />
+    <Content Include="Content\iCheck\line\green.css" />
+    <Content Include="Content\iCheck\line\grey.css" />
+    <Content Include="Content\iCheck\line\line%402x.png" />
+    <Content Include="Content\iCheck\line\line.css" />
+    <Content Include="Content\iCheck\line\line.png" />
+    <Content Include="Content\iCheck\line\orange.css" />
+    <Content Include="Content\iCheck\line\pink.css" />
+    <Content Include="Content\iCheck\line\purple.css" />
+    <Content Include="Content\iCheck\line\red.css" />
+    <Content Include="Content\iCheck\line\yellow.css" />
+    <Content Include="Content\iCheck\line\_all.css" />
+    <Content Include="Content\iCheck\minimal\aero%402x.png" />
+    <Content Include="Content\iCheck\minimal\aero.css" />
+    <Content Include="Content\iCheck\minimal\aero.png" />
+    <Content Include="Content\iCheck\minimal\blue%402x.png" />
+    <Content Include="Content\iCheck\minimal\blue.css" />
+    <Content Include="Content\iCheck\minimal\blue.png" />
+    <Content Include="Content\iCheck\minimal\green%402x.png" />
+    <Content Include="Content\iCheck\minimal\green.css" />
+    <Content Include="Content\iCheck\minimal\green.png" />
+    <Content Include="Content\iCheck\minimal\grey%402x.png" />
+    <Content Include="Content\iCheck\minimal\grey.css" />
+    <Content Include="Content\iCheck\minimal\grey.png" />
+    <Content Include="Content\iCheck\minimal\minimal%402x.png" />
+    <Content Include="Content\iCheck\minimal\minimal.css" />
+    <Content Include="Content\iCheck\minimal\minimal.png" />
+    <Content Include="Content\iCheck\minimal\orange%402x.png" />
+    <Content Include="Content\iCheck\minimal\orange.css" />
+    <Content Include="Content\iCheck\minimal\orange.png" />
+    <Content Include="Content\iCheck\minimal\pink%402x.png" />
+    <Content Include="Content\iCheck\minimal\pink.css" />
+    <Content Include="Content\iCheck\minimal\pink.png" />
+    <Content Include="Content\iCheck\minimal\purple%402x.png" />
+    <Content Include="Content\iCheck\minimal\purple.css" />
+    <Content Include="Content\iCheck\minimal\purple.png" />
+    <Content Include="Content\iCheck\minimal\red%402x.png" />
+    <Content Include="Content\iCheck\minimal\red.css" />
+    <Content Include="Content\iCheck\minimal\red.png" />
+    <Content Include="Content\iCheck\minimal\yellow%402x.png" />
+    <Content Include="Content\iCheck\minimal\yellow.css" />
+    <Content Include="Content\iCheck\minimal\yellow.png" />
+    <Content Include="Content\iCheck\minimal\_all.css" />
+    <Content Include="Content\iCheck\polaris\polaris%402x.png" />
+    <Content Include="Content\iCheck\polaris\polaris.css" />
+    <Content Include="Content\iCheck\polaris\polaris.png" />
+    <Content Include="Content\iCheck\square\aero%402x.png" />
+    <Content Include="Content\iCheck\square\aero.css" />
+    <Content Include="Content\iCheck\square\aero.png" />
+    <Content Include="Content\iCheck\square\blue%402x.png" />
+    <Content Include="Content\iCheck\square\blue.css" />
+    <Content Include="Content\iCheck\square\blue.png" />
+    <Content Include="Content\iCheck\square\green%402x.png" />
+    <Content Include="Content\iCheck\square\green.css" />
+    <Content Include="Content\iCheck\square\green.png" />
+    <Content Include="Content\iCheck\square\grey%402x.png" />
+    <Content Include="Content\iCheck\square\grey.css" />
+    <Content Include="Content\iCheck\square\grey.png" />
+    <Content Include="Content\iCheck\square\orange%402x.png" />
+    <Content Include="Content\iCheck\square\orange.css" />
+    <Content Include="Content\iCheck\square\orange.png" />
+    <Content Include="Content\iCheck\square\pink%402x.png" />
+    <Content Include="Content\iCheck\square\pink.css" />
+    <Content Include="Content\iCheck\square\pink.png" />
+    <Content Include="Content\iCheck\square\purple%402x.png" />
+    <Content Include="Content\iCheck\square\purple.css" />
+    <Content Include="Content\iCheck\square\purple.png" />
+    <Content Include="Content\iCheck\square\red%402x.png" />
+    <Content Include="Content\iCheck\square\red.css" />
+    <Content Include="Content\iCheck\square\red.png" />
+    <Content Include="Content\iCheck\square\square%402x.png" />
+    <Content Include="Content\iCheck\square\square.css" />
+    <Content Include="Content\iCheck\square\square.png" />
+    <Content Include="Content\iCheck\square\yellow%402x.png" />
+    <Content Include="Content\iCheck\square\yellow.css" />
+    <Content Include="Content\iCheck\square\yellow.png" />
+    <Content Include="Content\iCheck\square\_all.css" />
+    <Content Include="Content\images\collapse.gif" />
+    <Content Include="Content\images\down.gif" />
+    <Content Include="Content\images\expand.gif" />
+    <Content Include="Content\images\header-columns-bg.gif" />
+    <Content Include="Content\images\header-columns-over-bg.gif" />
+    <Content Include="Content\images\sort-asc.gif" />
+    <Content Include="Content\images\sort-desc.gif" />
+    <Content Include="Content\ionicons.css" />
+    <Content Include="Content\ionicons.min.css" />
+    <Content Include="Content\jquery.fileupload.css" />
+    <Content Include="Content\JqueyDataTables\jquery.dataTables.min.css" />
+    <Content Include="Content\pace.css" />
+    <Content Include="Content\pace.min.css" />
+    <Content Include="Content\serenity\images\32px.png" />
+    <Content Include="Content\serenity\images\accessright.png" />
+    <Content Include="Content\serenity\images\accordion-down.png" />
+    <Content Include="Content\serenity\images\accordion-left.png" />
+    <Content Include="Content\serenity\images\accordion-right.png" />
+    <Content Include="Content\serenity\images\add.png" />
+    <Content Include="Content\serenity\images\add2.png" />
+    <Content Include="Content\serenity\images\address-book-open.png" />
+    <Content Include="Content\serenity\images\address-book.png" />
+    <Content Include="Content\serenity\images\agenda.png" />
+    <Content Include="Content\serenity\images\alarm-clock-exclamation.png" />
+    <Content Include="Content\serenity\images\alarm-clock.png" />
+    <Content Include="Content\serenity\images\application-resize-actual.png" />
+    <Content Include="Content\serenity\images\application-resize-full.png" />
+    <Content Include="Content\serenity\images\application-resize.png" />
+    <Content Include="Content\serenity\images\apply-button.png" />
+    <Content Include="Content\serenity\images\apply-changes-button.png" />
+    <Content Include="Content\serenity\images\arrow-circle-135.png" />
+    <Content Include="Content\serenity\images\arrow-circle-double.png" />
+    <Content Include="Content\serenity\images\arrow-continue.png" />
+    <Content Include="Content\serenity\images\arrow-curve-left.png" />
+    <Content Include="Content\serenity\images\arrow-down.png" />
+    <Content Include="Content\serenity\images\arrow-step-over.png" />
+    <Content Include="Content\serenity\images\arrow-stop.png" />
+    <Content Include="Content\serenity\images\arrow-up.png" />
+    <Content Include="Content\serenity\images\asterisk.png" />
+    <Content Include="Content\serenity\images\auction-hammer.png" />
+    <Content Include="Content\serenity\images\back-arrow-black.png" />
+    <Content Include="Content\serenity\images\back-arrow-white.png" />
+    <Content Include="Content\serenity\images\balance.png" />
+    <Content Include="Content\serenity\images\balloon.png" />
+    <Content Include="Content\serenity\images\balloons.png" />
+    <Content Include="Content\serenity\images\barcode.png" />
+    <Content Include="Content\serenity\images\bell.png" />
+    <Content Include="Content\serenity\images\bin-exclamation.png" />
+    <Content Include="Content\serenity\images\bin-minus.png" />
+    <Content Include="Content\serenity\images\bin.png" />
+    <Content Include="Content\serenity\images\binocular.png" />
+    <Content Include="Content\serenity\images\blank.gif" />
+    <Content Include="Content\serenity\images\block.png" />
+    <Content Include="Content\serenity\images\blog.png" />
+    <Content Include="Content\serenity\images\bomb.png" />
+    <Content Include="Content\serenity\images\book-open.png" />
+    <Content Include="Content\serenity\images\book.png" />
+    <Content Include="Content\serenity\images\bookmark.png" />
+    <Content Include="Content\serenity\images\box.png" />
+    <Content Include="Content\serenity\images\briefcase.png" />
+    <Content Include="Content\serenity\images\brightness-small-low.png" />
+    <Content Include="Content\serenity\images\brightness-small.png" />
+    <Content Include="Content\serenity\images\bug.png" />
+    <Content Include="Content\serenity\images\building-arrow.png" />
+    <Content Include="Content\serenity\images\building-medium.png" />
+    <Content Include="Content\serenity\images\building-old.png" />
+    <Content Include="Content\serenity\images\building.png" />
+    <Content Include="Content\serenity\images\calculator.png" />
+    <Content Include="Content\serenity\images\calculator2.png" />
+    <Content Include="Content\serenity\images\calculator3.png" />
+    <Content Include="Content\serenity\images\calendar-blue.png" />
+    <Content Include="Content\serenity\images\calendar-day.png" />
+    <Content Include="Content\serenity\images\calendar-task.png" />
+    <Content Include="Content\serenity\images\calendar.png" />
+    <Content Include="Content\serenity\images\card-small.png" />
+    <Content Include="Content\serenity\images\categories.png" />
+    <Content Include="Content\serenity\images\category.png" />
+    <Content Include="Content\serenity\images\certificate-fail.png" />
+    <Content Include="Content\serenity\images\certificate-fail2.png" />
+    <Content Include="Content\serenity\images\certificate-ok.png" />
+    <Content Include="Content\serenity\images\certificate-ok2.png" />
+    <Content Include="Content\serenity\images\chain-small.png" />
+    <Content Include="Content\serenity\images\check2.png" />
+    <Content Include="Content\serenity\images\checkbox-gray.png" />
+    <Content Include="Content\serenity\images\checkbox-no.png" />
+    <Content Include="Content\serenity\images\checkbox-null.png" />
+    <Content Include="Content\serenity\images\checkbox-states.png" />
+    <Content Include="Content\serenity\images\checkbox-yes.png" />
+    <Content Include="Content\serenity\images\clipboard-list.png" />
+    <Content Include="Content\serenity\images\clipboard-task.png" />
+    <Content Include="Content\serenity\images\clock.png" />
+    <Content Include="Content\serenity\images\column-picker.png" />
+    <Content Include="Content\serenity\images\construction.png" />
+    <Content Include="Content\serenity\images\control-record-small.png" />
+    <Content Include="Content\serenity\images\counter.png" />
+    <Content Include="Content\serenity\images\credit-card.png" />
+    <Content Include="Content\serenity\images\cross-script.png" />
+    <Content Include="Content\serenity\images\cross.png" />
+    <Content Include="Content\serenity\images\csv.png" />
+    <Content Include="Content\serenity\images\currency.png" />
+    <Content Include="Content\serenity\images\cv.png" />
+    <Content Include="Content\serenity\images\data-sync.png" />
+    <Content Include="Content\serenity\images\datepicker.gif" />
+    <Content Include="Content\serenity\images\datepicker.png" />
+    <Content Include="Content\serenity\images\delete.png" />
+    <Content Include="Content\serenity\images\delete2.png" />
+    <Content Include="Content\serenity\images\dialog-alert.png" />
+    <Content Include="Content\serenity\images\dialog-confirm.png" />
+    <Content Include="Content\serenity\images\dialog-information.png" />
+    <Content Include="Content\serenity\images\dialog-warning.png" />
+    <Content Include="Content\serenity\images\direction.png" />
+    <Content Include="Content\serenity\images\disk-arrow.png" />
+    <Content Include="Content\serenity\images\disk-black-accept.png" />
+    <Content Include="Content\serenity\images\disk-black.png" />
+    <Content Include="Content\serenity\images\disk.png" />
+    <Content Include="Content\serenity\images\doc.png" />
+    <Content Include="Content\serenity\images\document-copy.png" />
+    <Content Include="Content\serenity\images\document-print-preview.png" />
+    <Content Include="Content\serenity\images\document-small-list.png" />
+    <Content Include="Content\serenity\images\document-small.png" />
+    <Content Include="Content\serenity\images\document-task.png" />
+    <Content Include="Content\serenity\images\document.png" />
+    <Content Include="Content\serenity\images\documents-stack.png" />
+    <Content Include="Content\serenity\images\docx.png" />
+    <Content Include="Content\serenity\images\door.png" />
+    <Content Include="Content\serenity\images\down.gif" />
+    <Content Include="Content\serenity\images\drawer.png" />
+    <Content Include="Content\serenity\images\dropdown.png" />
+    <Content Include="Content\serenity\images\edit.png" />
+    <Content Include="Content\serenity\images\envelope.png" />
+    <Content Include="Content\serenity\images\eraser-plus.png" />
+    <Content Include="Content\serenity\images\eraser.png" />
+    <Content Include="Content\serenity\images\exclamation.png" />
+    <Content Include="Content\serenity\images\eye.png" />
+    <Content Include="Content\serenity\images\feed.png" />
+    <Content Include="Content\serenity\images\file-import.png" />
+    <Content Include="Content\serenity\images\fingerprint.png" />
+    <Content Include="Content\serenity\images\folder-arrow.png" />
+    <Content Include="Content\serenity\images\folder-close.png" />
+    <Content Include="Content\serenity\images\folder-horizontal.png" />
+    <Content Include="Content\serenity\images\folder-import.png" />
+    <Content Include="Content\serenity\images\folder-open-document.png" />
+    <Content Include="Content\serenity\images\full-screen-2.png" />
+    <Content Include="Content\serenity\images\funnel.png" />
+    <Content Include="Content\serenity\images\gear.png" />
+    <Content Include="Content\serenity\images\get-products.png" />
+    <Content Include="Content\serenity\images\get.png" />
+    <Content Include="Content\serenity\images\globe-small.png" />
+    <Content Include="Content\serenity\images\grid-title-bg.gif" />
+    <Content Include="Content\serenity\images\gtk-print-preview.png" />
+    <Content Include="Content\serenity\images\hammer-screwdriver.png" />
+    <Content Include="Content\serenity\images\hammer.png" />
+    <Content Include="Content\serenity\images\header-columns-bg.gif" />
+    <Content Include="Content\serenity\images\header-columns-over-bg.gif" />
+    <Content Include="Content\serenity\images\home.png" />
+    <Content Include="Content\serenity\images\hourglass.png" />
+    <Content Include="Content\serenity\images\inbox-document-text.png" />
+    <Content Include="Content\serenity\images\inbox-document.png" />
+    <Content Include="Content\serenity\images\inbox.png" />
+    <Content Include="Content\serenity\images\information-frame.png" />
+    <Content Include="Content\serenity\images\item.png" />
+    <Content Include="Content\serenity\images\jpg.png" />
+    <Content Include="Content\serenity\images\key.png" />
+    <Content Include="Content\serenity\images\keyboard.png" />
+    <Content Include="Content\serenity\images\layer-small.png" />
+    <Content Include="Content\serenity\images\license-key.png" />
+    <Content Include="Content\serenity\images\lifebuoy.png" />
+    <Content Include="Content\serenity\images\light-bulb.png" />
+    <Content Include="Content\serenity\images\list-delete.png" />
+    <Content Include="Content\serenity\images\loading.gif" />
+    <Content Include="Content\serenity\images\location.png" />
+    <Content Include="Content\serenity\images\lock.png" />
+    <Content Include="Content\serenity\images\luggage.png" />
+    <Content Include="Content\serenity\images\magnifier-left.png" />
+    <Content Include="Content\serenity\images\magnifier-medium-left.png" />
+    <Content Include="Content\serenity\images\magnifier-medium.png" />
+    <Content Include="Content\serenity\images\magnifier-zoom.png" />
+    <Content Include="Content\serenity\images\magnifier.png" />
+    <Content Include="Content\serenity\images\mail-open.png" />
+    <Content Include="Content\serenity\images\mail.png" />
+    <Content Include="Content\serenity\images\maximize-button.png" />
+    <Content Include="Content\serenity\images\maximize-button2.png" />
+    <Content Include="Content\serenity\images\medal.png" />
+    <Content Include="Content\serenity\images\meeting.png" />
+    <Content Include="Content\serenity\images\mhtml.png" />
+    <Content Include="Content\serenity\images\money.png" />
+    <Content Include="Content\serenity\images\new.png" />
+    <Content Include="Content\serenity\images\newspaper.png" />
+    <Content Include="Content\serenity\images\node-insert-next.png" />
+    <Content Include="Content\serenity\images\node-select-all.png" />
+    <Content Include="Content\serenity\images\notebook-pencil.png" />
+    <Content Include="Content\serenity\images\notebook-share.png" />
+    <Content Include="Content\serenity\images\notebook.png" />
+    <Content Include="Content\serenity\images\notebooks.png" />
+    <Content Include="Content\serenity\images\odata.png" />
+    <Content Include="Content\serenity\images\ok.png" />
+    <Content Include="Content\serenity\images\open-share.png" />
+    <Content Include="Content\serenity\images\order.png" />
+    <Content Include="Content\serenity\images\organization-tree.png" />
+    <Content Include="Content\serenity\images\outlook.png" />
+    <Content Include="Content\serenity\images\pager-bg.gif" />
+    <Content Include="Content\serenity\images\pager-buttons.png" />
+    <Content Include="Content\serenity\images\pager-load.gif" />
+    <Content Include="Content\serenity\images\paper-bag.png" />
+    <Content Include="Content\serenity\images\paper-clip.png" />
+    <Content Include="Content\serenity\images\payment.png" />
+    <Content Include="Content\serenity\images\pda.png" />
+    <Content Include="Content\serenity\images\pdf.png" />
+    <Content Include="Content\serenity\images\pencil.png" />
+    <Content Include="Content\serenity\images\picture-delete.png" />
+    <Content Include="Content\serenity\images\picture.png" />
+    <Content Include="Content\serenity\images\pill.png" />
+    <Content Include="Content\serenity\images\pin.png" />
+    <Content Include="Content\serenity\images\pipette.png" />
+    <Content Include="Content\serenity\images\place-empty.png" />
+    <Content Include="Content\serenity\images\plug.png" />
+    <Content Include="Content\serenity\images\plus-button.png" />
+    <Content Include="Content\serenity\images\plus-circle-false.png" />
+    <Content Include="Content\serenity\images\plus-circle.png" />
+    <Content Include="Content\serenity\images\plus-octagon-frame.png" />
+    <Content Include="Content\serenity\images\plus.png" />
+    <Content Include="Content\serenity\images\png.png" />
+    <Content Include="Content\serenity\images\price-tag.png" />
+    <Content Include="Content\serenity\images\printer.png" />
+    <Content Include="Content\serenity\images\product.png" />
+    <Content Include="Content\serenity\images\project-logs.png" />
+    <Content Include="Content\serenity\images\project-module.png" />
+    <Content Include="Content\serenity\images\project-version.png" />
+    <Content Include="Content\serenity\images\project.png" />
+    <Content Include="Content\serenity\images\projection-screen-presentation.png" />
+    <Content Include="Content\serenity\images\projection-screen.png" />
+    <Content Include="Content\serenity\images\property-blue.png" />
+    <Content Include="Content\serenity\images\property.png" />
+    <Content Include="Content\serenity\images\question-frame.png" />
+    <Content Include="Content\serenity\images\quick-search-loading.gif" />
+    <Content Include="Content\serenity\images\receipt.png" />
+    <Content Include="Content\serenity\images\report-arrow.png" />
+    <Content Include="Content\serenity\images\report-excel.png" />
+    <Content Include="Content\serenity\images\report-minus.png" />
+    <Content Include="Content\serenity\images\report-pencil.png" />
+    <Content Include="Content\serenity\images\report-plus.png" />
+    <Content Include="Content\serenity\images\report.png" />
+    <Content Include="Content\serenity\images\ruby.png" />
+    <Content Include="Content\serenity\images\ruler.png" />
+    <Content Include="Content\serenity\images\safe.png" />
+    <Content Include="Content\serenity\images\sale.png" />
+    <Content Include="Content\serenity\images\scissors.png" />
+    <Content Include="Content\serenity\images\script.png" />
+    <Content Include="Content\serenity\images\scripts-text.png" />
+    <Content Include="Content\serenity\images\sitemap-application-blue.png" />
+    <Content Include="Content\serenity\images\sitemap.png" />
+    <Content Include="Content\serenity\images\slash.png" />
+    <Content Include="Content\serenity\images\slick-header-columns-over-bg.gif" />
+    <Content Include="Content\serenity\images\slides.png" />
+    <Content Include="Content\serenity\images\sofa.png" />
+    <Content Include="Content\serenity\images\sort-order.png" />
+    <Content Include="Content\serenity\images\spreadsheet-template.png" />
+    <Content Include="Content\serenity\images\spreadsheet.png" />
+    <Content Include="Content\serenity\images\sprites.png" />
+    <Content Include="Content\serenity\images\star-pencil.png" />
+    <Content Include="Content\serenity\images\sticky-note-plus.png" />
+    <Content Include="Content\serenity\images\sticky-note-small-pin.png" />
+    <Content Include="Content\serenity\images\sticky-note-small.png" />
+    <Content Include="Content\serenity\images\sticky-notes-pin.png" />
+    <Content Include="Content\serenity\images\sticky-notes-stack.png" />
+    <Content Include="Content\serenity\images\sticky-notes.png" />
+    <Content Include="Content\serenity\images\stock.png" />
+    <Content Include="Content\serenity\images\store.png" />
+    <Content Include="Content\serenity\images\table-chart.png" />
+    <Content Include="Content\serenity\images\table-header.gif" />
+    <Content Include="Content\serenity\images\table-select-all.png" />
+    <Content Include="Content\serenity\images\table.png" />
+    <Content Include="Content\serenity\images\tag--arrow.png" />
+    <Content Include="Content\serenity\images\tag--exclamation.png" />
+    <Content Include="Content\serenity\images\tag-label.png" />
+    <Content Include="Content\serenity\images\tag-plus.png" />
+    <Content Include="Content\serenity\images\tag-small.png" />
+    <Content Include="Content\serenity\images\tag.png" />
+    <Content Include="Content\serenity\images\tags-label.png" />
+    <Content Include="Content\serenity\images\tags.png" />
+    <Content Include="Content\serenity\images\thumb-file-72.png" />
+    <Content Include="Content\serenity\images\tick-empty.png" />
+    <Content Include="Content\serenity\images\tick-green.png" />
+    <Content Include="Content\serenity\images\tick-red.png" />
+    <Content Include="Content\serenity\images\ticket-arrow.png" />
+    <Content Include="Content\serenity\images\ticket-exclamation.png" />
+    <Content Include="Content\serenity\images\ticket-plus.png" />
+    <Content Include="Content\serenity\images\ticket-stub.png" />
+    <Content Include="Content\serenity\images\ticket-user.png" />
+    <Content Include="Content\serenity\images\toggle-expand.png" />
+    <Content Include="Content\serenity\images\toggle-small-expand.png" />
+    <Content Include="Content\serenity\images\toggle-small.png" />
+    <Content Include="Content\serenity\images\toggle.png" />
+    <Content Include="Content\serenity\images\toolbar-bg.gif" />
+    <Content Include="Content\serenity\images\toolbox.png" />
+    <Content Include="Content\serenity\images\trash.gif" />
+    <Content Include="Content\serenity\images\trash.png" />
+    <Content Include="Content\serenity\images\tree-item.png" />
+    <Content Include="Content\serenity\images\truck.png" />
+    <Content Include="Content\serenity\images\ui-check-box-uncheck.png" />
+    <Content Include="Content\serenity\images\ui-radio-button-uncheck.png" />
+    <Content Include="Content\serenity\images\unchecked.gif" />
+    <Content Include="Content\serenity\images\universal.png" />
+    <Content Include="Content\serenity\images\unlock-disable.png" />
+    <Content Include="Content\serenity\images\unlock.png" />
+    <Content Include="Content\serenity\images\user-arrow.png" />
+    <Content Include="Content\serenity\images\user-business.png" />
+    <Content Include="Content\serenity\images\user-female.png" />
+    <Content Include="Content\serenity\images\user-share.png" />
+    <Content Include="Content\serenity\images\user-worker.png" />
+    <Content Include="Content\serenity\images\user.png" />
+    <Content Include="Content\serenity\images\users.png" />
+    <Content Include="Content\serenity\images\viewtree.png" />
+    <Content Include="Content\serenity\images\wall-brick.png" />
+    <Content Include="Content\serenity\images\wand-plus.png" />
+    <Content Include="Content\serenity\images\wand.png" />
+    <Content Include="Content\serenity\images\warning.png" />
+    <Content Include="Content\serenity\images\wheel.png" />
+    <Content Include="Content\serenity\images\wooden-box.png" />
+    <Content Include="Content\serenity\images\wrench-screwdriver.png" />
+    <Content Include="Content\serenity\images\wrench.png" />
+    <Content Include="Content\serenity\images\xls.png" />
+    <Content Include="Content\serenity\images\xlsx.png" />
+    <Content Include="Content\serenity\images\xml.png" />
+    <Content Include="Content\serenity\images\zones-stack.png" />
+    <Content Include="Content\serenity\images\zoom.png" />
+    <Content Include="Content\serenity\serenity.css" />
+    <Content Include="Content\simple-line-icons.css" />
+    <Content Include="Content\site\images\accordion-arrows.png" />
+    <Content Include="Content\site\images\serenity-logo-40.png" />
+    <Content Include="Content\site\images\serenity-logo-g-40.png" />
+    <Content Include="Content\site\images\serenity-logo-w-128.png" />
+    <Content Include="Content\site\images\serenity-logo-w-40.png" />
+    <Content Include="Content\site\images\tick-empty.png" />
+    <Content Include="Content\site\images\tick-green-partial.png" />
+    <Content Include="Content\site\images\tick-red-partial.png" />
+    <Content Include="Content\site\site.css" />
+    <Content Include="Content\site\site.htmlcontent.css" />
+    <Content Include="Content\site\site.rtl.css" />
+    <Content Include="Content\site\slides\slide1.jpg" />
+    <Content Include="Content\site\slides\slide2.jpg" />
+    <Content Include="Content\site\slides\slide3.jpg" />
+    <Content Include="Content\site\slides\slide4.jpg" />
+    <Content Include="Content\site\slides\slide5.jpg" />
+    <Content Include="Content\slick-default-theme.css" />
+    <Content Include="Content\slick.columnpicker.css" />
+    <Content Include="Content\slick.grid.css" />
+    <Content Include="Content\slick.headerbuttons.css" />
+    <Content Include="Content\slick.headermenu.css" />
+    <Content Include="Content\slick.pager.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="img\breadcrumb.png" />
+    <Content Include="img\demo\av1.jpg" />
+    <Content Include="img\demo\av2.jpg" />
+    <Content Include="img\demo\av3.jpg" />
+    <Content Include="img\demo\av4.jpg" />
+    <Content Include="img\demo\av5.jpg" />
+    <Content Include="img\demo\envelope.png" />
+    <Content Include="img\gritter.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.flot.min.js" />
+    <Content Include="js\jquery.flot.resize.min.js" />
+    <Content Include="js\jquery.gritter.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.peity.min.js" />
+    <Content Include="js\jquery.ui.custom.js" />
+    <Content Include="js\jquery.uniform.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\jquery.wizard.js" />
+    <Content Include="js\less.min.js" />
+    <Content Include="js\matrix.chat.js" />
+    <Content Include="js\matrix.dashboard.js" />
+    <Content Include="js\matrix.js" />
+    <Content Include="js\matrix.popover.js" />
+    <Content Include="js\select2.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\moment.min.js" />
+    <Content Include="Scripts\Custom\ScheduleGrid.js" />
+    <Content Include="Scripts\Custom\switch.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\WelcomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Authentication\Role.cs" />
+    <Compile Include="Models\Authentication\User.cs" />
+    <Compile Include="Models\Authentication\UserRole.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\EmployeeSchedule.cs" />
+    <Compile Include="Models\Enums\NatureOfServiceEnum.cs" />
+    <Compile Include="Models\NatureOfService.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\WorkOrder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\WebApiClientUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Content\adminlte\.csslintrc" />
+    <Content Include="Content\adminlte\404_500_errors.less" />
+    <Content Include="Content\adminlte\AdminLTE.less" />
+    <Content Include="Content\adminlte\alerts.less" />
+    <Content Include="Content\adminlte\bootstrap-social.less" />
+    <Content Include="Content\adminlte\boxes.less" />
+    <Content Include="Content\adminlte\buttons.less" />
+    <Content Include="Content\adminlte\callout.less" />
+    <Content Include="Content\adminlte\carousel.less" />
+    <Content Include="Content\adminlte\control-sidebar.less" />
+    <Content Include="Content\adminlte\core.less" />
+    <Content Include="Content\adminlte\direct-chat.less" />
+    <Content Include="Content\adminlte\dropdown.less" />
+    <Content Include="Content\adminlte\forms.less" />
+    <Content Include="Content\adminlte\fullcalendar.less" />
+    <Content Include="Content\adminlte\header.less" />
+    <Content Include="Content\adminlte\info-box.less" />
+    <Content Include="Content\adminlte\invoice.less" />
+    <Content Include="Content\adminlte\labels.less" />
+    <Content Include="Content\adminlte\lockscreen.less" />
+    <Content Include="Content\adminlte\login_and_register.less" />
+    <Content Include="Content\adminlte\mailbox.less" />
+    <Content Include="Content\adminlte\miscellaneous.less" />
+    <Content Include="Content\adminlte\mixins.less" />
+    <Content Include="Content\adminlte\modal.less" />
+    <Content Include="Content\adminlte\navs.less" />
+    <Content Include="Content\adminlte\print.less" />
+    <Content Include="Content\adminlte\products.less" />
+    <Content Include="Content\adminlte\profile.less" />
+    <Content Include="Content\adminlte\progress-bars.less" />
+    <Content Include="Content\adminlte\select2.less" />
+    <Content Include="Content\adminlte\sidebar-mini.less" />
+    <Content Include="Content\adminlte\sidebar.less" />
+    <Content Include="Content\adminlte\skins\skin-black-light.less" />
+    <Content Include="Content\adminlte\skins\skin-black.less" />
+    <Content Include="Content\adminlte\skins\skin-blue-light.less" />
+    <Content Include="Content\adminlte\skins\skin-blue.less" />
+    <Content Include="Content\adminlte\skins\skin-green-light.less" />
+    <Content Include="Content\adminlte\skins\skin-green.less" />
+    <Content Include="Content\adminlte\skins\skin-purple-light.less" />
+    <Content Include="Content\adminlte\skins\skin-purple.less" />
+    <Content Include="Content\adminlte\skins\skin-red-light.less" />
+    <Content Include="Content\adminlte\skins\skin-red.less" />
+    <Content Include="Content\adminlte\skins\skin-yellow-light.less" />
+    <Content Include="Content\adminlte\skins\skin-yellow.less" />
+    <Content Include="Content\adminlte\skins\_all-skins.less" />
+    <Content Include="Content\adminlte\small-box.less" />
+    <Content Include="Content\adminlte\social-widgets.less" />
+    <Content Include="Content\adminlte\table.less" />
+    <Content Include="Content\adminlte\timeline.less" />
+    <Content Include="Content\adminlte\users-list.less" />
+    <Content Include="Content\adminlte\variables.less" />
+    <Content Include="Content\bootstrap-less\mixins.less" />
+    <Content Include="Content\bootstrap-less\mixins\alerts.less" />
+    <Content Include="Content\bootstrap-less\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap-less\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap-less\mixins\buttons.less" />
+    <Content Include="Content\bootstrap-less\mixins\center-block.less" />
+    <Content Include="Content\bootstrap-less\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap-less\mixins\forms.less" />
+    <Content Include="Content\bootstrap-less\mixins\gradients.less" />
+    <Content Include="Content\bootstrap-less\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap-less\mixins\grid.less" />
+    <Content Include="Content\bootstrap-less\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap-less\mixins\image.less" />
+    <Content Include="Content\bootstrap-less\mixins\labels.less" />
+    <Content Include="Content\bootstrap-less\mixins\list-group.less" />
+    <Content Include="Content\bootstrap-less\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap-less\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap-less\mixins\opacity.less" />
+    <Content Include="Content\bootstrap-less\mixins\pagination.less" />
+    <Content Include="Content\bootstrap-less\mixins\panels.less" />
+    <Content Include="Content\bootstrap-less\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap-less\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap-less\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap-less\mixins\resize.less" />
+    <Content Include="Content\bootstrap-less\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap-less\mixins\size.less" />
+    <Content Include="Content\bootstrap-less\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap-less\mixins\table-row.less" />
+    <Content Include="Content\bootstrap-less\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap-less\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap-less\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap-less\variables.less" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\site\site.administration.less" />
+    <Content Include="Content\site\site.basicsamples.less" />
+    <Content Include="Content\site\site.less" />
+    <Content Include="Content\site\site.meeting.less" />
+    <Content Include="Content\site\site.membership.less" />
+    <Content Include="Content\site\site.mixins.less" />
+    <Content Include="Content\site\site.northwind.less" />
+    <Content Include="Content\site\site.organization.less" />
+    <Content Include="Content\site\site.theme.less" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Views\Schedule\CreateSchedule.cshtml" />
+    <Content Include="Views\Shared\_ScheduleGridView.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Content\Custom\login-form.less" />
+    <Content Include="Views\Login\OneTimePasswordView.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Welcome\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1430</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1430/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
