@@ -5,11 +5,13 @@
     Layout = null;
 
     var emailId = Model != null ? Model.EmailId : string.Empty;
+    var userId = Model != null ? Model.UserId.ToString() : string.Empty;
 
     string disableControls = string.Empty;
     if (ViewBag.DisplayOtpControl)
     {
         disableControls = "disabled='disabled'";
+        //@Model = (User)ViewBag.AuthenticatedUser;
     }
 }
 
@@ -51,34 +53,42 @@
     @using (Ajax.BeginForm("Index", "Login", new AjaxOptions() { HttpMethod = "Post" }))
     {
 
-        <input type="text" title="username" placeholder="username" name="EmailId"  @disableControls />
+        <input type="text" title="username" placeholder="username" name="UserName" @disableControls />
         <input type="password" title="password" placeholder="password" name="Password" @disableControls />
         if (!ViewBag.DisplayOtpControl)
         {
-        <button type="submit" class="btn"> Login</button>
-        <a class="forgot" href="#">Forgot Username?</a>
-        }
-        if (ViewBag.DisplayOtpControl)
-        {
-            ViewBag.IsOtpRequested = true;
-            Html.RenderPartial("OneTimePasswordView");
+            <button type="submit" class="btn"> Login</button>
+            <a class="forgot" href="#">Forgot Password?</a>
+            @Html.ActionLink("Forgot Password?","ForgotPassword","Login")
         }
     }
-    </div><!--end log form -->
-
-
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet/less" href="~/Content/Custom/login-form.less" />
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/less.min.js"></script>
-    <style>
-        legend.scheduler-border {
-            width: inherit; /* Or auto */
-            padding: 0 10px; /* To give a bit of padding on the left and right */
-            border-bottom: none;
+    @if (ViewBag.DisplayOtpControl)
+    {
+        using (Ajax.BeginForm("ValidateOneTimePassword", "Login", new AjaxOptions() { HttpMethod = "Post" }))
+        {
+            ViewBag.IsOtpRequested = true;
+            //Html.RenderPartial("OneTimePasswordView");
+            <div>
+                <br />
+                <input type="text" title="onetimepassword" placeholder="One Time Password" name="OneTimePassword" />
+                @*<input type="hidden" name="EmailId" />
+                <input type="hidden" name="UserId" />*@
+                @Html.HiddenFor(m => m.EmailId)
+                @Html.HiddenFor(m => m.UserId)
+                <button type="submit" class="btn col-sm-3"> Submit OTP</button>
+                @*<a class="btn col-sm-3" href="/Login/ValidateOneTimePassword">Submit OTP</a>*@
+                @*@Ajax.ActionLink("Submit OTP", "ValidateOneTimePassword", "Login", new AjaxOptions { HttpMethod = "Post" }, new { @class = "btn col-sm-3" })*@
+                <a id="btnResendOtp" class="btn col-sm-3 pull-right" data-user-id= @userId> Resend OTP</a>
+            </div>
         }
+    }
+</div><!--end log form -->
 
 
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet/less" href="~/Content/Custom/login-form.less" />
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/less.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="~/Scripts/Custom/Login/ResendOtp.js"></script>
 
-        /************/
-    </style>

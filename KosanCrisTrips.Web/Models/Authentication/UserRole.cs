@@ -9,7 +9,7 @@ namespace KosanCrisTrips.Web.Models.Authentication
     {
         public int UserRoleId { get; set; }
         public int UserId { get; set; }
-        public int RoleId { get; set; }
-        public string RoleName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

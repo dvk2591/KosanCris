@@ -1,0 +1,21 @@
+﻿@using KosanCrisTrips.Web.Models.Authentication
+@model User
+
+<div class="log-form">
+    <h2>Forgot Password</h2>
+
+    @using (Html.BeginForm("ForgotPassword", "Login", FormMethod.Post))
+    {
+        Html.TextBoxFor(m => m.EmailId, new { @title = "emailId", @placeholder = "Email Id" });
+        Html.TextBoxFor(m => m.PhoneNumber, new { @title = "phoneNumber", @placeholder = "Phone Number" });
+
+        <button type="submit" class="btn"> Reset Password</button>
+    }
+
+</div>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet/less" href="~/Content/Custom/login-form.less" />
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/less.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

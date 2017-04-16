@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KosanCrisTrips.Web.Models.Authentication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,14 @@ namespace KosanCrisTrips.Web.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            return View();
+            User authenticatedUser = new User();
+
+            if (TempData != null && TempData.Any(x => x.Key == "AuthenticatedUser"))
+            {
+                authenticatedUser = TempData["AuthenticatedUser"] as User;
+                ViewBag.UserName = authenticatedUser.UserName;
+            }
+            return View(authenticatedUser);
         }
     }
 }
