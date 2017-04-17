@@ -9,7 +9,9 @@ html, body{height:100%}
 
 body {
 	overflow-x: hidden;
-	margin-top: -10px; font-family: 'Open Sans', sans-serif; font-size:12px; color:#666;
+	margin-top: -10px; font-family: 'Open Sans', sans-serif; 
+    font-size:14px;
+    color:#666;
 }
 a{color:#666;}
 a:hover, a:focus {
@@ -33,21 +35,22 @@ hr{ border-top-color:#dadada;}
 .label-important, .badge-important{ background:#f74d4d;}
 
 /*Metro Background color class*/
-.bg_lb{ background:#27a9e3;}
+.bg_lb {
+    background: rgba(0,154,218,.85);}
 .bg_db{ background:#2295c9;}
-.bg_lg{ background:#28b779;}
+.bg_lg{ background:#0df334;}
 .bg_dg{ background:#28b779;}
-.bg_ly{ background:#ffb848;}
+.bg_ly{ background:#f49212;}
 .bg_dy{ background:#da9628;}
 .bg_ls{ background:#2255a4;}
-.bg_lo{ background:#da542e;}
+.bg_lo{ background:#fb071f;}
 .bg_lr{ background:#f74d4d;}
 .bg_lv{ background:#603bbc;}
 .bg_lh{ background:#b6b3b3;}
 
 /* Header */
 #header {
-	height: 77px;
+	/*height: 77px;*/
 	position: relative;
 	width: 100%;
 	z-index: -9;
@@ -91,18 +94,22 @@ hr{ border-top-color:#dadada;}
 
 /* Top user navigation */
 #user-nav {
-	position: absolute;
-	/*left: 220px;*/
-    right:0px;
-	top:0px;
-	z-index: 20;
-	margin: 0;
+    position: absolute;
+    /*left: 220px;*/
+    right: 0px;
+    top: 0px;
+    margin: 0;
+    background-color: #000000;
 }
-#user-nav > ul {
-	margin: 0;
-	padding: 0;
-	list-style: none; border-right: 1px solid #2e363f;border-left: 1px solid #000;
-}
+    #user-nav > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-right: 1px solid #2e363f;
+        border-left: 1px solid #000;
+        font-family: Cardo, serif;
+    
+    }
 #user-nav > ul > li {
 	float: left;
 	list-style-type: none;
@@ -196,7 +203,7 @@ hr{ border-top-color:#dadada;}
 	background: none repeat scroll 0 0 #eeeeee;
 	margin-left: 220px;
 	margin-right: 0;
-	padding-bottom: 25px;
+	/*padding-bottom: 25px;*/
 	position: relative;
 	min-height:100%;
 	width: auto;
@@ -298,6 +305,7 @@ hr{ border-top-color:#dadada;}
 	text-align:center; position:relative;
 	float:left;
 	margin-top:10px;
+    margin-left:15px;
 }
 .stat-boxes, .quick-actions, .quick-actions-horizontal, .stats-plain {
 	display: block;
@@ -574,7 +582,7 @@ hr{ border-top-color:#dadada;}
 .widget-title h5 {
 	color: #666;
 	float: left;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 12px;
 	line-height: 12px;
@@ -795,7 +803,7 @@ hr{ border-top-color:#dadada;}
 }
 #chat-messages-inner .time {
 	color: #999999;
-	font-size: 11px;
+	font-size: 12px;
 	float:right;
 }
 #chat-messages-inner .msg {
@@ -831,7 +839,7 @@ hr{ border-top-color:#dadada;}
 	list-style: none outside none;
 	margin: 0;
 	padding: 0;
-	font-size: 10px;
+	font-size: 12px;
 }
 .chat-users .contact-list li {
 	border: 1px solid #DADADA;
@@ -904,7 +912,7 @@ hr{ border-top-color:#dadada;}
 }
 .activity-list li a span {
 	color: #AAAAAA;
-	font-size: 11px;
+	font-size: 12px;
 	font-style: italic;
 }
 .activity-list li a i {
@@ -1276,17 +1284,18 @@ form {
 	top: 10px; left:5px;
 	margin: 3px auto;
 }
-#user-nav {
-	position: relative;
-	left: auto;
-	right: auto;
-	width: 100%;
-	margin-top: -31px;
-	border-top:1px solid #363E48;
-	margin-bottom: 0px;
-	background:#2E363F;
-	float:right;
-}
+    #user-nav {
+        position: relative;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin-top: -31px;
+        border-top: 1px solid #363E48;
+        margin-bottom: 0px;
+        background: #000000;
+
+        float: right;
+    }
 .navbar > .nav {
 	float: none;
 }
@@ -1337,21 +1346,21 @@ form {
 	margin-right: 0;
 	left: 30%;
 }
-#sidebar {
-	float: none;
-	width: 100% !important;
-	display:block;
-	position:relative;
-	top:0px;
-}
-#sidebar > ul {
-	margin:0px;
-	padding:0px;
-	width:100%;
-	display:block;
-	z-index:999;
-	position:relative
-}
+    #sidebar {
+        float: none;
+        width: 100% !important;
+        display: block;
+        position: relative;
+        top: 0px;
+    }
+    #sidebar > ul {
+       margin: 0px;
+        padding: 0px;
+        width: 100%;
+        display: block;
+        z-index: 999;
+        position: relative
+    }
 #sidebar > ul > li {
 	list-style-type:none;
 	display:block;
@@ -1585,4 +1594,15 @@ div.dataTables_wrapper .ui-widget-header {
 	text-align: center;
 }
 #sidebar .content{ display:none;}
+}
+.paddinglr0 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+#footer {
+    background-color: #000000;
+    padding:5px;
+    /*margin-top:100px;
+    margin-left:-60px;
+    margin-right: 50px;*/
 }

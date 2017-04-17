@@ -41,7 +41,7 @@ namespace KosanCrisTrips.Web.Utilities
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("UserId", parameters[0]?.ToString());
+                client.DefaultRequestHeaders.Add("LoggedinUser", parameters[0]?.ToString());
                 client.DefaultRequestHeaders.Add("Method", parameters[1]?.ToString());
                 //if (parameters != null && parameters.Count() > 1)
                 //{

@@ -1,10 +1,10 @@
 body {
-	background:#2E363F;
+    background: #000000;
 }
 
 #header {
-	background-color: #1f262d;
-   margin-top:10px;
+    background-color: #000000;
+    margin-top: 10px;
 }
 #search input[type=text], #search button {
 	background-color: #28b779;
@@ -12,7 +12,10 @@ body {
 #search input[type=text]:focus {
 	color: #777777;
 }
-#sidebar > ul{border-bottom: 1px solid #37414b}
+#sidebar > ul {
+    border-bottom: 1px solid #37414b;
+    /*font-family: 'Cardo', serif;*/
+}
 #sidebar > ul > li {
 	border-top: 1px solid #37414b; border-bottom: 1px solid #1f262d;
 }

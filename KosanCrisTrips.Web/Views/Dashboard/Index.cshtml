@@ -3,21 +3,303 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container-fluid">
-    <div class="quick-actions_homepage">
+<div class="container-fluid" style=" font-family: Cardo, serif;">
+    <div class="quick-actions_homepage"style=" font-family: Cardo, serif;">
         <ul class="quick-actions">
-            <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
-            <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
-            <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>
-            <li class="bg_lo"> <a href="tables.html"> <i class="icon-th"></i> Tables</a> </li>
-            <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>
-            <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
-            <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
-            <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
-            <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
-            <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li>
+            <li class="bg_lb span3" style="width:24%"> <a href="index.html">
+                <p><h2>
+                @*<span class="glyphicon glyphicon-inbox"></span>*@
+                    <img class="hidden-xs" src="~/icons/Total services/apple-icon-60x60.png"/>
+                    <img class="visible-xs icon-align-center" src="~/icons/Total services/android-icon-48x48.png" style=" margin-left: 42%;"/>
+                </h2></p> 
+                <span class="label label-important"><h4>100</h4></span>
+                <strong><h5> Total Services </h5></strong></a> </li>
 
+            <li class="bg_lg span3" style="width:24%"> <a href="index.html">
+                <p><h2>
+                @*<span class="glyphicon glyphicon-ok-circle"></span>*@
+                    <img class="hidden-xs" src="~/icons/Services completed/apple-icon-60x60.png" />
+                    <img class="visible-xs icon-align-center" src="~/icons/Services completed/android-icon-36x36.png" style=" margin-left: 42%;"/>
+                </h2></p> 
+                <span class="label label-success"><h4>50</h4></span>
+                <strong> <h5>Services Completed</h5></strong></a> </li>
+
+             <li class="bg_ly span3" style="width:24%"> <a href="widgets.html"> 
+                <p><h2>
+                  @*<span class="glyphicon glyphicon-arrow-up"></span>*@
+                    <img class="hidden-xs" src="~/icons/Services In-progress/apple-icon-60x60.png" />
+                    <img class="visible-xs icon-align-center" src="~/icons/Services In-progress/android-icon-36x36.png" style="margin-left: 42%;"/>
+                      
+                 </h2></p>
+                 <span class="label label-default"><h4>25</h4></span>
+                 <strong><h5> Services In-progress </h5></strong></a> </li>
+           
+            <li class="bg_lo span3" style="width:24%"> <a href="tables.html"> 
+                <p><h2>
+                    @*<span class="glyphicon glyphicon-shopping-cart">*@
+                           <img class="hidden-xs" src="~/icons/Services On-hold/apple-icon-60x60.png" />
+                           <img class="visible-xs icon-align-center" src="~/icons/Services On-hold/android-icon-36x36.png" style="margin-left: 42%;"/>
+                      </span></h2></p>
+                    <span class="label label-info"><h4>25</h4></span>
+                    <strong><h5>Services On-hold</h5></a></strong> </li>
         </ul>
     </div>
+    <div class="row" style="margin-left:0px">
+        <div class="col-xs-12 col-sm-6 col-lg-6 ">
+            <div class="widget-box-border well">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-ok"></i></span>
+                    <h5>To Do list</h5>
+                </div>
+                <div class="widget-content">
+                    <div class="todo">
+                        <ul>
+                            <li class="clearfix">
+                                <div class="txt"> New Service Schedule - Client Name <span class="by label">5 hours</span></div>
+                                <div class="pull-right"> <a class="tip" href="#" data-original-title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" data-original-title="Delete"><i class="icon-remove"></i></a> </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="txt"> Upload Service Report for #SC-988999  <span class="date badge badge-warning">10 min</span> </div>
+                                <div class="pull-right"> <a class="tip" href="#" data-original-title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" data-original-title="Delete"><i class="icon-remove"></i></a> </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="txt"> Book Tickets for Schedule #SC-999888  <span class="by label">1 day</span></div>
+                                <div class="pull-right"> <a class="tip" href="#" data-original-title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" data-original-title="Delete"><i class="icon-remove"></i></a> </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="txt"> Approve Schedules <span class="date badge badge-info">3 days</span> </div>
+                                <div class="pull-right"> <a class="tip" href="#" data-original-title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" data-original-title="Delete"><i class="icon-remove"></i></a> </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="txt"> Check your messages and notifications  <span class="date badge badge-important">1 week</span> </div>
+                                <div class="pull-right"> <a class="tip" href="#" data-original-title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" data-original-title="Delete"><i class="icon-remove"></i></a> </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="widget-box-border well">
+
+                <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2">
+                    <span class="icon"><i class="icon-ok"></i></span>
+                    <h5>Latest Posts</h5>
+                </div>
+                <div class="widget-content nopadding collapse in" id="collapseG2">
+                    <ul class="recent-posts">
+                        <li>
+                            <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av1.jpg"> </div>
+                            <div class="article-post">
+                                <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                                <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av2.jpg"> </div>
+                            <div class="article-post">
+                                <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                                <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
+                            </div>
+                        </li>
+                        @*<li>
+                                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av4.jpg"> </div>
+                                <div class="article-post">
+                                    <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                                    <p><a href="#">This is a much longer one that will go on for a few lines.Itaffle to pad out the comment.</a> </p>
+                                </div>
+                            </li>*@
+                        <li>
+                            <button class="btn btn-warning btn-mini">View All</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row" style="margin-left:0px">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="widget-box-border well">
+
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-ok"></i></span>
+                    <h5>Progress Box</h5>
+                </div>
+                <div class="widget-content">
+                    <ul class="unstyled">
+                        <li>
+                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 81% Clicks <span class="pull-right strong">567</span>
+                            <div class="progress progress-striped ">
+                                <div style="width: 81%;" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 72% Uniquie Clicks <span class="pull-right strong">507</span>
+                            <div class="progress progress-success progress-striped ">
+                                <div style="width: 72%;" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon24 icomoon-icon-arrow-down-2 red"></span> 53% Impressions <span class="pull-right strong">457</span>
+                            <div class="progress progress-warning progress-striped ">
+                                <div style="width: 53%;" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                                <span class="icon24 icomoon-icon-arrow-down-2 red"></span> 25% Impressions <span class="pull-right strong">300</span>
+                                <div class="progress progress-warning progress-striped ">
+                                    <div style="width: 25%;" class="bar"></div>
+                                </div>
+                            </li>
+                        <li>
+                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 3% Online Users <span class="pull-right strong">8</span>
+                            <div class="progress progress-danger progress-striped ">
+                                <div style="width: 3%;" class="bar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--chat-->
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Messages Inbox
+                    <div class="btn-group pull-right" style="display:none;">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li>
+                                <a href="http://www.jquery2dotnet.com">
+                                    <span class="glyphicon glyphicon-refresh">
+                                    </span>Refresh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jquery2dotnet.com">
+                                    <span class="glyphicon glyphicon-ok-sign">
+                                    </span>Available
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jquery2dotnet.com">
+                                    <span class="glyphicon glyphicon-remove">
+                                    </span>Busy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jquery2dotnet.com">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                    Away
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://www.jquery2dotnet.com">
+                                    <span class="glyphicon glyphicon-off"></span>
+                                    Sign Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="chat">
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Sainath</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago
+                                    </small>
+                                </div>
+                                <p>
+                                    Hello sir, my task is completed, pls tell me about next schedule.
+                                </p>
+                            </div>
+                        </li>
+                        @*<li class="right clearfix">
+                            <span class="chat-img pull-right">
+                                <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                    <strong class="pull-right primary-font">Krishna</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>*@
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Sainath</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago
+                                    </small>
+                                </div>
+                                <p>
+                                    Hello sir, vehicle is entered into the first gate and cverification is done.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle"/>
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Sainath</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago
+                                    </small>
+                                </div>
+                                <p>
+                                   pla check at gate 2
+                                </p>
+                            </div>
+                        </li>
+                        @*<li class="right clearfix">
+                            <span class="chat-img pull-right">
+                                <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                    <strong class="pull-right primary-font">Krishna</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    @*<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send
+                            </button>
+                        </span>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 

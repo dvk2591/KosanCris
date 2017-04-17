@@ -655,6 +655,7 @@
     <Content Include="Content\slick.headerbuttons.css" />
     <Content Include="Content\slick.headermenu.css" />
     <Content Include="Content\slick.pager.css" />
+    <Content Include="Content\switch\simple-switch.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -709,6 +710,24 @@
     <Content Include="img\gritter.png" />
     <Content Include="img\logo.png" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\chosen\chosen-sprite%402x.png" />
+    <Content Include="js\chosen\chosen-sprite.png" />
+    <Content Include="js\chosen\chosen.css" />
+    <Content Include="js\chosen\chosen.jquery.js" />
+    <Content Include="js\chosen\chosen.jquery.min.js" />
+    <Content Include="js\chosen\chosen.min.css" />
+    <Content Include="js\chosen\chosen.proto.js" />
+    <Content Include="js\chosen\chosen.proto.min.js" />
+    <Content Include="js\chosen\docsupport\chosen.png" />
+    <Content Include="js\chosen\docsupport\init.js" />
+    <Content Include="js\chosen\docsupport\init.proto.js" />
+    <Content Include="js\chosen\docsupport\oss-credit.png" />
+    <Content Include="js\chosen\docsupport\prism.css" />
+    <Content Include="js\chosen\docsupport\prism.js" />
+    <Content Include="js\chosen\docsupport\style.css" />
+    <Content Include="js\chosen\index.html" />
+    <Content Include="js\chosen\index.proto.html" />
+    <Content Include="js\chosen\options.html" />
     <Content Include="js\fullcalendar.min.js" />
     <Content Include="js\jquery.dataTables.min.js" />
     <Content Include="js\jquery.flot.min.js" />
@@ -716,6 +735,7 @@
     <Content Include="js\jquery.gritter.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.peity.min.js" />
+    <Content Include="js\jquery.simpleswitch.js" />
     <Content Include="js\jquery.ui.custom.js" />
     <Content Include="js\jquery.uniform.js" />
     <Content Include="js\jquery.validate.js" />
@@ -727,6 +747,7 @@
     <Content Include="js\matrix.popover.js" />
     <Content Include="js\select2.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\CreateSchedule.js" />
     <Content Include="Scripts\Custom\Login\ResendOtp.js" />
     <Content Include="Scripts\Custom\moment.min.js" />
     <Content Include="Scripts\Custom\ScheduleGrid.js" />
@@ -740,8 +761,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LookUpController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
+    <Compile Include="Extensions\MiscExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -753,6 +776,7 @@
     <Compile Include="Models\EmployeeSchedule.cs" />
     <Compile Include="Models\Enums\NatureOfServiceEnum.cs" />
     <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\LookUpViewModel.cs" />
     <Compile Include="Models\NatureOfService.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\WorkOrder.cs" />
@@ -878,6 +902,7 @@
     <Content Include="Views\Login\ForgotPassword.cshtml" />
     <Content Include="Views\Login\FirstTimeLogin.cshtml" />
     <Content Include="Views\Login\ChangePassword.cshtml" />
+    <Content Include="js\chosen\bower.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -887,6 +912,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\LookUp\" />
     <Folder Include="Views\Welcome\" />
   </ItemGroup>
   <PropertyGroup>

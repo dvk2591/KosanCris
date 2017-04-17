@@ -20,20 +20,27 @@
 
     <link href="~/Content/Custom/custom-styles.css" rel="stylesheet" />
     <link href="~/Content/Custom/switch-style.css" rel="stylesheet" />
-    
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Griffy|Hanalei|Monoton|Piedra" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <script src="~/js/jquery.min.js"></script>
+
 </head>
 <!--<body class="skin-it sidebar-mini fixed">-->
 <body class="skin-it fixed sidebar-mini sidebar-collapse">
-    <div id="header">
-        <h1 style="line-height: 200px;"><a href="#">.</a></h1>
-    </div>
-    @{ 
-        var userName = ViewBag.UserName ?? "User";
-    }
+    @*<div id="header" style=" font-family: Lobster, serif; padding-left: 10px; padding-top: 1px;">*@
+        <div id="header" style="font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; padding-left: 10px; padding-top: 1px; ">
+            @*  <h1 style="line-height: 200px;"><a href="#">KOSAN TRIPS</a></h1>*@
+            @* <h2>Kosan TRIPs</h2>*@
+            @*<h2><span style="color:#1E90FF">K</span><span style="color:#fb071f">O</span><span style="color:cyan">S</span><span style="color:#f49212">A</span><span style="color:#0df334">N</span> <span style="color:#ffffff;">Trips</span></h2>*@
+            <h2><span style="color:#1E90FF">K</span><span style="color:#fb071f">O</span><span style="color:cyan">S</span><span style="color:#f49212">A</span><span style="color:#0df334">N</span> <span style="color:#ffffff;font-family: 'Lobster', serif;">Trips</span></h2>
+        </div>
+
+    @* http://localhost:1430/widgets.html *@
     <div id="user-nav" class="navbar navbar-inverse">
-        <ul class="nav" style="width: auto; margin: 0px;">
+        <ul class="nav navbar-nav" style="width: auto; margin: 0px;font-family: Cardo, serif;"">
             <li class="dropdown" id="profile-messages">
-                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome @userName</span><b class="caret"></b></a>
+                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
                     <li class="divider"></li>
@@ -57,10 +64,11 @@
             <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
             <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
         </ul>
+            </div>
     </div>
     <div id="sidebar">
-        <a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
-        <ul style="display: block;margin-top: 5px;">
+        <a href="#" class="visible-phone"><i class="icon icon-home"></i>Dashboard</a>
+        <ul style="display: block;margin-top: 5px;font-family: 'Cardo', serif;font-size:15px;">
             <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
             <li class="submenu">
                 <a href="charts.html"><i class="fa fa-book"></i> <span>Knowledge Share</span></a>
@@ -146,6 +154,22 @@
             @RenderBody()
         </div>
     </div>
+    <div id="footer" >
+        @*<footer class="main-footer">
+
+        </div>
+                <strong>Copyright © 2017 <a href="http://www.kosancrisplant.com/">kosan crisplant</a>.</strong> All rights reserved.
+            </footer>*@
+        @*<div class="container-fluid" style="color: gray;margin-bottom: -100px; margin-left: -60px; margin-right: -60px; /* width: 100%; */ text-align: center;
+        ">
+                    <div class="panel panel-default">
+                        <div class="panel-footer"><strong>2017 © <a href="http://www.kosancrisplant.com/">kosan crisplant</a>.</strong> All rights reserved.</div>
+                    </div>
+                </div>*@
+
+
+
+    <strong>2017 © <a href="http://www.kosancrisplant.com/">kosan crisplant</a>.</strong> All rights reserved. </div>
     <script src="~/js/excanvas.min.js"></script>
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery.ui.custom.js"></script>
@@ -181,6 +205,8 @@
                 $('#datetimepicker2').datetimepicker();
             });
     </script>
+
+  
 </body>
 
 </html>
